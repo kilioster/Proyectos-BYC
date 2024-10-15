@@ -1,0 +1,102 @@
+{% extends 'layout/base.html' %}
+
+{% load static %}
+
+{% block 'title' %} Home {% endblock 'title' %}
+
+
+{% block 'content' %}
+
+    {% include 'layout/partials/carousel.html' %}
+
+    {% include 'layout/partials/nosotros.html' %}
+
+    {% include 'layout/partials/compromiso.html' %}
+
+    {% include 'layout/partials/objetivos.html' %}
+
+    <a name="equipos"></a>
+    <section class="text-black body-font">
+        <div class="container px-5 py-24 mx-auto">
+            <div class="flex flex-col text-center w-full mb-20">
+                <p class="text-6xl text-red-400 italic"><b>PROPIEDADES</b></p>
+                <br>
+                <p class="lg:w-2/3 mx-auto leading-relaxed text-base font-normal">
+                    Contamos con una amplia variedad de propiedades y personal capacitado para otorgar a los clientes el mejor de los servicios a nivel regional.
+                </p>
+            </div>
+            <div class="flex flex-wrap sm:flex-row -m-4 justify justify-center">
+                <!-- Item 1 -->
+                <div class="lg:w-1/3 sm:w-1/2 p-4">
+                    <div class="flex relative">
+                        <img alt="Casa Iquique 1" class="absolute inset-0 w-full h-full object-cover object-center" src="{% static '/media/FACHADA  LLANQUIHUE 2266 D-202.webp' %}">
+                        <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+                            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">Casa</h2>
+                            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Casa Iquique LLanquihue 2266 D-202</h1>
+                            <p class="leading-relaxed">Casa con 3 Dormitorios y 1 Baño.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="lg:w-1/3 sm:w-1/2 p-4">
+                    <div class="flex relative">
+                        <img alt="Casa Iquique 2" class="absolute inset-0 w-full h-full object-cover object-center" src="{% static '/media/FACHADA 21 DE MAYO.webp' %}">
+                        <div class="px-12 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+                            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">Casa</h2>
+                            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Casa Iquique 21 de Mayo</h1>
+                            <p class="leading-relaxed">Casa con 3 Dormitorios y 1 Baño.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="lg:w-1/3 sm:w-1/2 p-4">
+                    <div class="flex relative">
+                        <img alt="Casa Iquique 3" class="absolute inset-0 w-full h-full object-cover object-center" src="{% static '/media/FACHADA ARQUEN.webp' %}">
+                        <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+                            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">Casa</h2>
+                            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Casa Iquique Arquen</h1>
+                            <p class="leading-relaxed">Casa con 3 Dormitorios y 1 Baño.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 4 -->
+                <div class="lg:w-1/3 sm:w-1/2 p-4">
+                    <div class="flex relative">
+                        <img alt="Casa Alto Hospicio 1" class="absolute inset-0 w-full h-full object-cover object-center" src="{% static '/media/FACHADA ARTURO FERNANDEZ 1487.webp' %}">
+                        <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+                            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">Casa</h2>
+                            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Casa Iquique Arquen 135</h1>
+                            <p class="leading-relaxed">Casa con 3 Dormitorios y 1 Baño.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 5 -->
+                <div class="lg:w-1/3 sm:w-1/2 p-4">
+                    <div class="flex relative">
+                        <img alt="Casa Alto  Hospcio 2" class="absolute inset-0 w-full h-full object-cover object-center" src="{% static '/media/FACHADA ARTURO FERNANDEZ 1491.webp' %}">
+                        <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+                            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">Casa</h2>
+                            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Casa Iquique Arturo Fernandez 1487</h1>
+                            <p class="leading-relaxed">Casa con 3 Dormitorios y 1 Baño.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 6 -->
+                <div class="lg:w-1/3 sm:w-1/2 p-4">
+                    <div class="flex relative">
+                        <img alt="Casa Alto Hospicio 3" class="absolute inset-0 w-full h-full object-cover object-center" src="{% static '/media/FACHADA CALLE CINCO 3081.webp' %}">
+                        <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+                            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">Casa</h2>
+                            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Casa Iquique Arturo Fernandez 1491</h1>
+                            <p class="leading-relaxed">Casa con 3 Dormitorios y 1 Baño.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center mt-16">
+                <a href="{% url 'propiedades' %}" class="bg-red-200 border-2 rounded-lg border-red-lighter p-4 shadow-inner font-black">Más Propiedades</a>
+            </div>
+        </div>
+    </section>
+
+{% endblock 'content' %}

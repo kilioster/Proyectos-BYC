@@ -1,0 +1,27 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INVERSIONES VICTORIA SPA | {% block 'title' %}{% endblock %}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+</head>
+
+<body class="bg-slate-100">
+    {% include 'layout/partials/header.html' %}
+
+    {% include 'layout/partials/nav.html' %}
+    
+    {% block 'content' %}
+        
+    {% endblock 'content' %}
+
+    {% include 'layout/partials/contacto.html' %}
+
+    {% include 'layout/partials/footer.html' %}
+</body>
+
+</html>
