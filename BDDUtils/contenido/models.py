@@ -63,7 +63,7 @@ class cuentas_ope(models.Model):
     
 class direccionamiento(models.Model):
     ip = models.CharField(max_length=15, null=False)
-    nombre_dispositivo = models.CharField(max_length=50, null=True)
+    nombre_dispositivo = models.CharField(max_length=50, null=True, default="Dispositivo no registrado")
     descripcion = models.CharField(max_length=100, null=True)
     mac = models.CharField(max_length=17, null=True)
     
