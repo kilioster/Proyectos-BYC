@@ -1,0 +1,2 @@
+2024-10-22 12:44:42,587 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-10-22 12:44:47,870 django.request WARNING  Not Found: /
