@@ -1,2 +1,9 @@
 # Auto detect text files and perform LF normalization
+.vscode
+.idea
+.coverage*
+.DS_Store
+staticfiles
+mediafiles
+client/node_modules
 * text=auto
