@@ -1,2 +1,126 @@
 2024-10-22 12:44:42,587 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2024-10-22 12:44:47,870 django.request WARNING  Not Found: /
+2024-10-22 15:14:11,601 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-10-22 15:14:14,170 django.request WARNING  Not Found: /
+2024-10-22 15:14:26,024 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-10-22 15:14:33,129 django.request WARNING  Not Found: /
+2024-10-22 15:14:37,937 django.request WARNING  Not Found: /admin
+2024-10-22 15:49:02,189 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-10-22 15:49:04,732 django.request WARNING  Not Found: /
+2024-10-22 15:49:55,070 django.request ERROR    Internal Server Error: /supersecret/login/
+Traceback (most recent call last):
+  File "C:\Users\CFARFAN\Documents\GitHub\Proyectos-BYC\project_realstate\estate-src\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\CFARFAN\Documents\GitHub\Proyectos-BYC\project_realstate\estate-src\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\CFARFAN\Documents\GitHub\Proyectos-BYC\project_realstate\estate-src\venv\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\CFARFAN\Documents\GitHub\Proyectos-BYC\project_realstate\estate-src\venv\lib\site-packages\django\contrib\admin\sites.py", line 414, in login
+    return LoginView.as_view(**defaults)(request)
+  File "C:\Users\CFARFAN\Documents\GitHub\Proyectos-BYC\project_realstate\estate-src\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\CFARFAN\Documents\GitHub\Proyectos-BYC\project_realstate\estate-src\venv\lib\site-packages\django\utils\decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\CFARFAN\Documents\GitHub\Proyectos-BYC\project_realstate\estate-src\venv\lib\site-packages\django\views\decorators\debug.py", line 89, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "C:\Users\CFARFAN\Documents\GitHub\Proyectos-BYC\project_realstate\estate-src\venv\lib\site-packages\django\utils\decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\CFARFAN\Documents\GitHub\Proyectos-BYC\project_realstate\estate-src\venv\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\CFARFAN\Documents\GitHub\Proyectos-BYC\project_realstate\estate-src\venv\lib\site-packages\django\utils\decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\CFARFAN\Documents\GitHub\Proyectos-BYC\project_realstate\estate-src\venv\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\CFARFAN\Documents\GitHub\Proyectos-BYC\project_realstate\estate-src\venv\lib\site-packages\django\contrib\auth\views.py", line 63, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\CFARFAN\Documents\GitHub\Proyectos-BYC\project_realstate\estate-src\venv\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\CFARFAN\Documents\GitHub\Proyectos-BYC\project_realstate\estate-src\venv\lib\site-packages\django\views\generic\edit.py", line 142, in post
+    return self.form_valid(form)
+  File "C:\Users\CFARFAN\Documents\GitHub\Proyectos-BYC\project_realstate\estate-src\venv\lib\site-packages\django\contrib\auth\views.py", line 92, in form_valid
+    auth_login(self.request, form.get_user())
+  File "C:\Users\CFARFAN\Documents\GitHub\Proyectos-BYC\project_realstate\estate-src\venv\lib\site-packages\django\contrib\auth\__init__.py", line 135, in login
+    user_logged_in.send(sender=user.__class__, request=request, user=user)
+  File "C:\Users\CFARFAN\Documents\GitHub\Proyectos-BYC\project_realstate\estate-src\venv\lib\site-packages\django\dispatch\dispatcher.py", line 180, in send
+    return [
+  File "C:\Users\CFARFAN\Documents\GitHub\Proyectos-BYC\project_realstate\estate-src\venv\lib\site-packages\django\dispatch\dispatcher.py", line 181, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+  File "C:\Users\CFARFAN\Documents\GitHub\Proyectos-BYC\project_realstate\estate-src\venv\lib\site-packages\django\contrib\auth\models.py", line 22, in update_last_login
+    user.save(update_fields=['last_login'])
+  File "C:\Users\CFARFAN\Documents\GitHub\Proyectos-BYC\project_realstate\estate-src\venv\lib\site-packages\django\contrib\auth\base_user.py", line 67, in save
+    super().save(*args, **kwargs)
+  File "C:\Users\CFARFAN\Documents\GitHub\Proyectos-BYC\project_realstate\estate-src\venv\lib\site-packages\django\db\models\base.py", line 726, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "C:\Users\CFARFAN\Documents\GitHub\Proyectos-BYC\project_realstate\estate-src\venv\lib\site-packages\django\db\models\base.py", line 774, in save_base
+    post_save.send(
+  File "C:\Users\CFARFAN\Documents\GitHub\Proyectos-BYC\project_realstate\estate-src\venv\lib\site-packages\django\dispatch\dispatcher.py", line 180, in send
+    return [
+  File "C:\Users\CFARFAN\Documents\GitHub\Proyectos-BYC\project_realstate\estate-src\venv\lib\site-packages\django\dispatch\dispatcher.py", line 181, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+  File "C:\Users\CFARFAN\Documents\GitHub\Proyectos-BYC\project_realstate\estate-src\apps\profiles\signals.py", line 16, in save_user_profile
+    instance.profile.save()
+  File "C:\Users\CFARFAN\Documents\GitHub\Proyectos-BYC\project_realstate\estate-src\venv\lib\site-packages\django\db\models\fields\related_descriptors.py", line 421, in __get__
+    raise self.RelatedObjectDoesNotExist(
+apps.users.models.User.profile.RelatedObjectDoesNotExist: User has no profile.
+2024-10-22 15:51:53,947 django.utils.autoreload INFO     C:\Users\CFARFAN\Documents\GitHub\Proyectos-BYC\project_realstate\estate-src\apps\profiles\models.py changed, reloading.
+2024-10-22 15:51:54,654 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-10-22 15:51:57,513 django.utils.autoreload INFO     C:\Users\CFARFAN\Documents\GitHub\Proyectos-BYC\project_realstate\estate-src\apps\profiles\models.py changed, reloading.
+2024-10-22 15:51:58,165 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-10-22 15:52:09,207 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-10-22 15:52:15,181 django.security.csrf WARNING  Forbidden (CSRF token missing or incorrect.): /supersecret/login/
+2024-10-22 15:52:31,349 django.request ERROR    Internal Server Error: /supersecret/login/
+Traceback (most recent call last):
+  File "C:\Users\CFARFAN\Documents\GitHub\Proyectos-BYC\project_realstate\estate-src\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\CFARFAN\Documents\GitHub\Proyectos-BYC\project_realstate\estate-src\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\CFARFAN\Documents\GitHub\Proyectos-BYC\project_realstate\estate-src\venv\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\CFARFAN\Documents\GitHub\Proyectos-BYC\project_realstate\estate-src\venv\lib\site-packages\django\contrib\admin\sites.py", line 414, in login
+    return LoginView.as_view(**defaults)(request)
+  File "C:\Users\CFARFAN\Documents\GitHub\Proyectos-BYC\project_realstate\estate-src\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\CFARFAN\Documents\GitHub\Proyectos-BYC\project_realstate\estate-src\venv\lib\site-packages\django\utils\decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\CFARFAN\Documents\GitHub\Proyectos-BYC\project_realstate\estate-src\venv\lib\site-packages\django\views\decorators\debug.py", line 89, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "C:\Users\CFARFAN\Documents\GitHub\Proyectos-BYC\project_realstate\estate-src\venv\lib\site-packages\django\utils\decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\CFARFAN\Documents\GitHub\Proyectos-BYC\project_realstate\estate-src\venv\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\CFARFAN\Documents\GitHub\Proyectos-BYC\project_realstate\estate-src\venv\lib\site-packages\django\utils\decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\CFARFAN\Documents\GitHub\Proyectos-BYC\project_realstate\estate-src\venv\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\CFARFAN\Documents\GitHub\Proyectos-BYC\project_realstate\estate-src\venv\lib\site-packages\django\contrib\auth\views.py", line 63, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\CFARFAN\Documents\GitHub\Proyectos-BYC\project_realstate\estate-src\venv\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\CFARFAN\Documents\GitHub\Proyectos-BYC\project_realstate\estate-src\venv\lib\site-packages\django\views\generic\edit.py", line 142, in post
+    return self.form_valid(form)
+  File "C:\Users\CFARFAN\Documents\GitHub\Proyectos-BYC\project_realstate\estate-src\venv\lib\site-packages\django\contrib\auth\views.py", line 92, in form_valid
+    auth_login(self.request, form.get_user())
+  File "C:\Users\CFARFAN\Documents\GitHub\Proyectos-BYC\project_realstate\estate-src\venv\lib\site-packages\django\contrib\auth\__init__.py", line 135, in login
+    user_logged_in.send(sender=user.__class__, request=request, user=user)
+  File "C:\Users\CFARFAN\Documents\GitHub\Proyectos-BYC\project_realstate\estate-src\venv\lib\site-packages\django\dispatch\dispatcher.py", line 180, in send
+    return [
+  File "C:\Users\CFARFAN\Documents\GitHub\Proyectos-BYC\project_realstate\estate-src\venv\lib\site-packages\django\dispatch\dispatcher.py", line 181, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+  File "C:\Users\CFARFAN\Documents\GitHub\Proyectos-BYC\project_realstate\estate-src\venv\lib\site-packages\django\contrib\auth\models.py", line 22, in update_last_login
+    user.save(update_fields=['last_login'])
+  File "C:\Users\CFARFAN\Documents\GitHub\Proyectos-BYC\project_realstate\estate-src\venv\lib\site-packages\django\contrib\auth\base_user.py", line 67, in save
+    super().save(*args, **kwargs)
+  File "C:\Users\CFARFAN\Documents\GitHub\Proyectos-BYC\project_realstate\estate-src\venv\lib\site-packages\django\db\models\base.py", line 726, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "C:\Users\CFARFAN\Documents\GitHub\Proyectos-BYC\project_realstate\estate-src\venv\lib\site-packages\django\db\models\base.py", line 774, in save_base
+    post_save.send(
+  File "C:\Users\CFARFAN\Documents\GitHub\Proyectos-BYC\project_realstate\estate-src\venv\lib\site-packages\django\dispatch\dispatcher.py", line 180, in send
+    return [
+  File "C:\Users\CFARFAN\Documents\GitHub\Proyectos-BYC\project_realstate\estate-src\venv\lib\site-packages\django\dispatch\dispatcher.py", line 181, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+  File "C:\Users\CFARFAN\Documents\GitHub\Proyectos-BYC\project_realstate\estate-src\apps\profiles\signals.py", line 16, in save_user_profile
+    instance.profile.save()
+  File "C:\Users\CFARFAN\Documents\GitHub\Proyectos-BYC\project_realstate\estate-src\venv\lib\site-packages\django\db\models\fields\related_descriptors.py", line 421, in __get__
+    raise self.RelatedObjectDoesNotExist(
+apps.users.models.User.profile.RelatedObjectDoesNotExist: User has no profile.
+2024-10-22 15:55:11,940 django.utils.autoreload INFO     Watching for file changes with StatReloader

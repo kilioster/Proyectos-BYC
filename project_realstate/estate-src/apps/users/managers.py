@@ -63,6 +63,6 @@ class CustomUserManager(BaseUserManager):
             raise ValueError(_('The email must be set'))
         
         user = self.create_user(username, first_name, last_name, email, password, **extra_fields)
-        user.sava(using=self._db)
+        user.save(using=self._db)
     
         return user
