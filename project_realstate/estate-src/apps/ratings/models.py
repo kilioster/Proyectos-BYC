@@ -20,7 +20,7 @@ class Rating(TimestampUUIDModel):
         null=True
     )
     agent = models.ForeignKey(
-        AUTH_USER_MODEL,
+        Profile,
         verbose_name=_('Agent being rated'),
         related_name='agent_review',
         on_delete=models.SET_NULL,

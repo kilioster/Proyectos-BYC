@@ -1,12 +1,13 @@
 from django.contrib import admin
+from django.utils.html import format_html
 from .models import sesionremota, nubecorporativa, cuentas, dominios, cuentas_admin, cuentas_ope, direccionamiento
 
 # Register your models here.
 class dominiosAdm(admin.ModelAdmin):
-    list_display = ("dominio", "enlace", "usuario", "password")
+    list_display = ["dominio", "url", "usuario", "password"]
     search_fields = ["dominio", "enlace"]
     sortable_by = ("dominio")
-    
+
 admin.site.register(dominios, dominiosAdm)
 
 class sesionremotaAdm(admin.ModelAdmin):
