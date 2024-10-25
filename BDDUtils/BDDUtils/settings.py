@@ -30,6 +30,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'contenido',
     'multiselectfield',
+    'xlsxwriter',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [

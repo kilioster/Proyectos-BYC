@@ -50,7 +50,7 @@ class sesionremota(models.Model):
     usuario = models.CharField(max_length=30, null=False)
     password = models.CharField(max_length=30, choices=TypePass, null=False)
     colaborador = models.CharField(max_length=50, null=False, default="DISPONIBLE")
-    sistema = MultiSelectField(choices=MY_SISTEMAS, max_choices=3, max_length=30, blank=True, null=True)
+    sistema = MultiSelectField(choices=MY_SISTEMAS, max_choices=8, max_length=30, blank=True, null=True)
     certificados = MultiSelectField(choices=MY_CERTIDICADOS, max_choices=3, max_length=30, blank=True, null=True)
     
     def is_upperclass(self):
@@ -78,14 +78,16 @@ class cuentas(models.Model):
         return self.plataforma
     
 class dominios(models.Model):
-    dominio = models.CharField(max_length=50, null=False)
-    enlace = models.URLField(max_length=60, null=False)
-    usuario = models.CharField(max_length=30, null=False)
-    password = models.CharField(max_length=30, null=False)
+    dominio = models.CharField(max_length=50, null=False, verbose_name='DOMINION')
+    enlace = models.URLField(max_length=60, null=False, verbose_name='ENLACE')
+    usuario = models.CharField(max_length=30, null=False, verbose_name='USUARIO')
+    password = models.CharField(max_length=30, null=False, verbose_name='PASSWORD')
     
     def url(self):
-        return format_html("<a href='{url}' target='_blank'>{url}</a>", url=self.enlace)
-    
+        return format_html(
+            '<a href="{url}">{url}</a>',
+            self.enlace,
+        )
     
 class cuentas_admin(models.Model):
     nombre = models.CharField(max_length=40, null=False)
