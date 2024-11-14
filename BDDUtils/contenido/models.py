@@ -119,3 +119,66 @@ class direccionamiento(models.Model):
     
     def __str__(self):
         return self.ip
+    
+class inventario(models.Model):
+    
+    class Typeempresa(models.TextChoices):
+        GBYC = 'GBYC', _('GBYC')
+        BYCT = 'BYCT', _('BYCT')
+        BULL = 'BULL', _('BULL')
+        IVIC = 'IVIC', _('IVIC')
+        FEMM = 'FEMM', _('FEMM')
+        KCBS = 'KCBS', _('KCBS')
+        
+    class Typearea(models.TextChoices):
+        BODEGA = 'Bodega', _('Bodega')
+        CONTABILIDAD = 'Contabilidad', _('Contabilidad')
+        CONTROLYGESTION = 'Control y Gestion', _('Gestion y Gestion')
+        DESARROLLO = 'Desarrollo', _('Desarrollo')
+        GERENCIA = 'Gerencia', _('Gerencia')
+        INSPECTOREQUIPO = 'Inspector de Equipos', _('Inspector de Equipos')
+        MAQUINARIA = 'Maquinarias', _('Maquinarias')
+        OPERACIONES = 'Operaciones', _('Operaciones')
+        PREVENCION = 'Prevencion de Riesgo', _('Prevencion de Riesgo')
+        RRHH = 'Recursos Humanos', _('Recursos Humanos')
+        RELACIONADAS = 'Relacionadas', _('Relacionadas')
+        TESORERIA = 'Tesoreria', _('Tesoreria')
+        VENTAS = 'Ventas', _('Ventas')
+        
+    class Typemarca(models.TextChoices):
+        HP = 'HP', _('HP')
+        LENOVO = 'Lenovo', _('Lenovo')
+        ASUS = 'Asus', _('Asus')
+    
+    empresa = models.CharField(choices=Typeempresa, max_length=20, null=False, blank=False, default=0)
+    responsable = models.CharField(max_length=20, null=False, blank=False, default=0)
+    cargo = models.CharField(max_length=20, null=False, blank=False, default=0)
+    area = models.CharField(choices=Typearea, max_length=20, null=False, default=0)
+    anydesk = models.IntegerField(max_length=20, null=False, blank=True, default=0)
+    rustdesk = models.IntegerField(max_length=20, null=False, blank=True, default=0)
+    password = models.CharField(max_length=20, null=False, blank=False, default=0)
+    actaentregado = models.IntegerField(max_length=20, null=False, blank=True, default=0)
+    fechaentrega = models.DateField(blank=True, null=True)
+    actadevolucion = models.IntegerField(max_length=20, null=False, blank=True, default=0)
+    fechadevolucion = models.DateField(blank=True, null=True)
+    tipo = models.CharField(max_length=20, null=False, blank=False, default=0)
+    marca = models.CharField(choices=Typemarca, max_length=8, null=False, blank=False, default=0)    
+    modelo = models.CharField(max_length=20, null=False, blank=False, default=0)
+    nserie = models.CharField(max_length=20, null=False, blank=False, default=0)
+    nombre_pc = models.CharField(max_length=20, null=False, blank=False, default=0)
+    usuario = models.CharField(max_length=20, null=False, blank=False, default=0)
+    marcacpu = models.CharField(max_length=20, null=False, blank=False, default=0)
+    modelocpu = models.CharField(max_length=20, null=False, blank=False, default=0)
+    ghzcpu = models.CharField(max_length=20, null=False, blank=False, default=0)
+    gbram = models.IntegerField(max_length=2, null=False, blank=False, default=0)
+    ddrx = models.CharField(max_length=6, null=False, blank=False, default=0)
+    mhzram = models.IntegerField(max_length=4, null=False, blank=False, default=0)
+    macethernet = models.CharField(max_length=18, blank=False, null=False, default=0)
+    macwifi = models.CharField(max_length=18, blank=False, null=False, default=0)
+    os = models.CharField(max_length=20, blank=False, null=False, default=0)
+    
+    def __str__(self):
+        return self.empresa
+
+    
+    

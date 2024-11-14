@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.utils.html import format_html
 from django.http import HttpResponse
-from .models import sesionremota, nubecorporativa, cuentas, dominios, cuentas_admin, cuentas_ope, direccionamiento
+from .models import *
 import xlsxwriter
 
 def download_excel(modeladmin, request, queryset):
@@ -28,7 +28,7 @@ download_excel.short_description = "Download selected items as Excel"
 
 # Register your models here.
 class dominiosAdm(admin.ModelAdmin):
-    list_display = ["dominio", "url", "usuario", "password"]
+    list_display = ["dominio", "enlace", "usuario", "password"]
     search_fields = ["dominio", "enlace"]
     sortable_by = ("dominio")
     
@@ -92,3 +92,11 @@ class direccionamientoAdm(admin.ModelAdmin):
     actions = [download_excel]
 
 admin.site.register(direccionamiento, direccionamientoAdm)
+
+class inventarioAdm(admin.ModelAdmin):
+    list_display = ("empresa","responsable","cargo","area","anydesk","rustdesk","password","actaentregado","fechaentrega","actadevolucion","fechadevolucion","tipo","marca","modelo","nserie","nombre_pc","usuario","marcacpu","modelocpu","ghzcpu","gbram","ddrx","mhzram","macethernet","macwifi","os")
+    sortable_by = ("responsable")
+    
+    actions = [download_excel]
+    
+admin.site.register(inventario, inventarioAdm)
